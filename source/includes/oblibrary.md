@@ -16,7 +16,7 @@ This code is used to print logs.
 ```javascript
 ob.request()
 ```
-> The above command prints the log
+> The above command is used to prepare requests
 
 
 This code is used to print logs.
