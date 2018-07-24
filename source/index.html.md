@@ -27,41 +27,27 @@ We have language bindings in NodeJs, C#, and Python! You can view code examples 
 
 # Authentication
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
+> To obtain an access token, use this code:
 
 ```javascript
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow');
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
+
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `Username & Password` with your login credentials.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+SOFOS uses API keys to allow access to the API. You can register a new SOFOS API key at our [developer portal](http://sofos.obto.co/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+SOFOS expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: Bearer GENERATED TOKEN`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
 
