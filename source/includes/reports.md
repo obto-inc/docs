@@ -1,5 +1,7 @@
 # Reports (SOFOS)
 
+![alt text](logo.png)
+
 ## Get Fee Defaulters
 
 ```ruby
