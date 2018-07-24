@@ -325,7 +325,7 @@ ID | The ID of the kitten to delete
 
 ## Get Monthly Class Attendance
 
-```ruby
+```nodejs
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
