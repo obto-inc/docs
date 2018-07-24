@@ -47,6 +47,19 @@ SOFOS expects for the API key to be included in all API requests to the server i
 
 `Authorization: Bearer GENERATED TOKEN`
 
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`POST http://*.obto.co/auth`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+user_name | NA    | Your user name which is used to login
+password  | NA    | Your password which is used to login
+
 <aside class="notice">
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
