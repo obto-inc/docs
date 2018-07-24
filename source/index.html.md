@@ -11,10 +11,10 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - reports
-  - errors
   - oblibrary
   - system_endpoints
+  - reports
+  - errors
 
 search: true
 ---
@@ -30,12 +30,6 @@ We have language bindings in NodeJs, C#, and Python! You can view code examples 
 > To obtain an access token, use this code:
 
 ```javascript
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow');
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
 
 ```
 
@@ -43,9 +37,9 @@ let api = kittn.authorize('meowmeowmeow');
 
 SOFOS uses API keys to allow access to the API. You can register a new SOFOS API key at our [developer portal](http://sofos.obto.co/developers).
 
-SOFOS expects for the API key to be included in all API requests to the server in a header that looks like the following:
+SOFOS expects a security tokem to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: Bearer GENERATED TOKEN`
+`Authorization: Bearer <GENERATED TOKEN>`
 
 This endpoint retrieves all kittens.
 
