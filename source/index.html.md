@@ -2,9 +2,9 @@
 title: OBTO API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - Nodejs
-  - Python
-  - Java
+  - javascript: NodeJs
+  - python: Python
+  - java: Java
 
 toc_footers:
   - <a href='https://sofos.obto.co'>Sign Up for a Developer Key</a>

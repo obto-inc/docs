@@ -325,11 +325,16 @@ ID | The ID of the kitten to delete
 
 ## Get Monthly Class Attendance
 
-```nodejs
+```javascript
 require 'kittn'
 
 api = Kittn::APIClient.authorize!('meowmeowmeow')
 api.kittens.delete(2)
+const kittn = require('kittn')
+
+let api = kittn.authorize('meowmeowmeow')
+let max = api.kittens.delete(2)
+
 ```
 
 ```python
@@ -339,17 +344,10 @@ api = kittn.authorize('meowmeowmeow')
 api.kittens.delete(2)
 ```
 
-```shell
+```java
 curl "http://example.com/api/kittens/2"
   -X DELETE
   -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
 ```
 
 > The above command returns JSON structured like this:
