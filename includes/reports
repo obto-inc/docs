@@ -1,4 +1,6 @@
-<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
+<h1 id='reports-sofos'>Reports (SOFOS)</h1>
+<p><img src="/images/logo.png" alt="alt text" /></p>
+<h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
