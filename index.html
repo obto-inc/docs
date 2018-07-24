@@ -235,35 +235,6 @@
               </ul>
           </li>
           <li>
-            <a href="#reports-sofos" class="toc-h1 toc-link" data-title="Reports (SOFOS)">Reports (SOFOS)</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-fee-defaulters" class="toc-h2 toc-link" data-title="Get Fee Defaulters">Get Fee Defaulters</a>
-                  </li>
-                  <li>
-                    <a href="#get-daily-fee-collection" class="toc-h2 toc-link" data-title="Get Daily Fee Collection">Get Daily Fee Collection</a>
-                  </li>
-                  <li>
-                    <a href="#get-daily-leave-report" class="toc-h2 toc-link" data-title="Get Daily Leave Report">Get Daily Leave Report</a>
-                  </li>
-                  <li>
-                    <a href="#get-daily-unique-sms-sent" class="toc-h2 toc-link" data-title="Get Daily Unique SMS Sent">Get Daily Unique SMS Sent</a>
-                  </li>
-                  <li>
-                    <a href="#get-daily-rollbacks" class="toc-h2 toc-link" data-title="Get Daily Rollbacks">Get Daily Rollbacks</a>
-                  </li>
-                  <li>
-                    <a href="#get-class-details" class="toc-h2 toc-link" data-title="Get Class Details">Get Class Details</a>
-                  </li>
-                  <li>
-                    <a href="#get-monthly-class-attendance" class="toc-h2 toc-link" data-title="Get Monthly Class Attendance">Get Monthly Class Attendance</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
-          </li>
-          <li>
             <a href="#system-library" class="toc-h1 toc-link" data-title="System Library">System Library</a>
               <ul class="toc-list-h2">
                   <li>
@@ -330,6 +301,35 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#reports-sofos" class="toc-h1 toc-link" data-title="Reports (SOFOS)">Reports (SOFOS)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-fee-defaulters" class="toc-h2 toc-link" data-title="Get Fee Defaulters">Get Fee Defaulters</a>
+                  </li>
+                  <li>
+                    <a href="#get-daily-fee-collection" class="toc-h2 toc-link" data-title="Get Daily Fee Collection">Get Daily Fee Collection</a>
+                  </li>
+                  <li>
+                    <a href="#get-daily-leave-report" class="toc-h2 toc-link" data-title="Get Daily Leave Report">Get Daily Leave Report</a>
+                  </li>
+                  <li>
+                    <a href="#get-daily-unique-sms-sent" class="toc-h2 toc-link" data-title="Get Daily Unique SMS Sent">Get Daily Unique SMS Sent</a>
+                  </li>
+                  <li>
+                    <a href="#get-daily-rollbacks" class="toc-h2 toc-link" data-title="Get Daily Rollbacks">Get Daily Rollbacks</a>
+                  </li>
+                  <li>
+                    <a href="#get-class-details" class="toc-h2 toc-link" data-title="Get Class Details">Get Class Details</a>
+                  </li>
+                  <li>
+                    <a href="#get-monthly-class-attendance" class="toc-h2 toc-link" data-title="Get Monthly Class Attendance">Get Monthly Class Attendance</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
       </ul>
         <ul class="toc-footer">
             <li><a href='https://sofos.obto.co'>Sign Up for a Developer Key</a></li>
@@ -347,13 +347,7 @@
 <blockquote>
 <p>To obtain an access token, use this code:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">require</span> <span class="s1">'kittn'</span>
-
-<span class="nx">api</span> <span class="o">=</span> <span class="nx">Kittn</span><span class="p">::</span><span class="nx">APIClient</span><span class="p">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-
+<pre class="highlight javascript tab-javascript"><code>
 </code></pre>
 <blockquote>
 <p>Make sure to replace <code>Username &amp; Password</code> with your login credentials.</p>
@@ -361,9 +355,9 @@
 
 <p>SOFOS uses API keys to allow access to the API. You can register a new SOFOS API key at our <a href="http://sofos.obto.co/developers">developer portal</a>.</p>
 
-<p>SOFOS expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>SOFOS expects a security tokem to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: Bearer GENERATED TOKEN</code></p>
+<p><code>Authorization: Bearer &lt;GENERATED TOKEN&gt;</code></p>
 
 <p>This endpoint retrieves all kittens.</p>
 <h3 id='http-request'>HTTP Request</h3>
@@ -391,329 +385,6 @@
 <aside class="notice">
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
-<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
-</code></pre><pre class="highlight python tab-python"><code>
-</code></pre><pre class="highlight shell tab-shell"><code>
-</code></pre><pre class="highlight javascript tab-javascript"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all fee defaulters for a given range.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://*.obto.co/getfeedefaultersv2.bto</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>start_month</td>
-<td>true</td>
-<td>Start month of the range.</td>
-</tr>
-<tr>
-<td>end_month</td>
-<td>true</td>
-<td>End month of the range</td>
-</tr>
-</tbody></table>
-<h3 id='http-response'>HTTP Response</h3><h2 id='get-daily-fee-collection'>Get Daily Fee Collection</h2><pre class="highlight ruby tab-ruby"><code>
-</code></pre><pre class="highlight python tab-python"><code>
-</code></pre><pre class="highlight shell tab-shell"><code>
-</code></pre><pre class="highlight javascript tab-javascript"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves daily fee collection for a given date range.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://*.obto.co/getdailyfeecollectionheadwise.bto</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Mandatory</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>from</td>
-<td>true</td>
-<td>Start date.</td>
-</tr>
-<tr>
-<td>to</td>
-<td>true</td>
-<td>End date</td>
-</tr>
-<tr>
-<td>payment_type</td>
-<td>true</td>
-<td>Payment type (cash, cheque, card, neft, all)</td>
-</tr>
-</tbody></table>
-<h2 id='get-daily-leave-report'>Get Daily Leave Report</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h2 id='get-daily-unique-sms-sent'>Get Daily Unique SMS Sent</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h2 id='get-daily-rollbacks'>Get Daily Rollbacks</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h2 id='get-class-details'>Get Class Details</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET https://*.obto.co/classbycategory.bto</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>None</td>
-<td>Blank</td>
-</tr>
-</tbody></table>
-<h2 id='get-monthly-class-attendance'>Get Monthly Class Attendance</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">require</span> <span class="s1">'kittn'</span>
-
-<span class="nx">api</span> <span class="o">=</span> <span class="nx">Kittn</span><span class="p">::</span><span class="nx">APIClient</span><span class="p">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">)</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight java tab-java"><code><span class="n">curl</span> <span class="s">"http://example.com/api/kittens/2"</span>
-  <span class="o">-</span><span class="n">X</span> <span class="n">DELETE</span>
-  <span class="o">-</span><span class="n">H</span> <span class="s">"Authorization: meowmeowmeow"</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
 <h1 id='system-library'>System Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
 <blockquote>
@@ -967,6 +638,265 @@ Remember — a happy kitten is an authenticated kitten!
 <tr>
 <td>ID</td>
 <td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all fee defaulters for a given range.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/getfeedefaultersv2.bto</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>start_month</td>
+<td>true</td>
+<td>Start month of the range.</td>
+</tr>
+<tr>
+<td>end_month</td>
+<td>true</td>
+<td>End month of the range</td>
+</tr>
+</tbody></table>
+<h3 id='http-response'>HTTP Response</h3><h2 id='get-daily-fee-collection'>Get Daily Fee Collection</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves daily fee collection for a given date range.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://*.obto.co/getdailyfeecollectionheadwise.bto</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td>true</td>
+<td>Start date.</td>
+</tr>
+<tr>
+<td>to</td>
+<td>true</td>
+<td>End date</td>
+</tr>
+<tr>
+<td>payment_type</td>
+<td>true</td>
+<td>Payment type (cash, cheque, card, neft, all)</td>
+</tr>
+</tbody></table>
+<h2 id='get-daily-leave-report'>Get Daily Leave Report</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE https://*.obto.co/</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h2 id='get-daily-unique-sms-sent'>Get Daily Unique SMS Sent</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE https://*.obto.co/</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h2 id='get-daily-rollbacks'>Get Daily Rollbacks</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE https://*.obto.co/</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+<h2 id='get-class-details'>Get Class Details</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/classbycategory.bto</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>None</td>
+<td>Blank</td>
+</tr>
+</tbody></table>
+<h2 id='get-monthly-class-attendance'>Get Monthly Class Attendance</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The SOFOS API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
 </tr>
 </tbody></table>
 
