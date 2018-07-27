@@ -33,6 +33,9 @@ password  | NA    | Your password which is used to login
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
 
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
+
 ## Important
 
 Every collection in SOFOS is accessible via a HTTP API.
@@ -54,6 +57,8 @@ https://*.obto.co/o/recs/<collection_name>?stream=true&project=<comma seperate l
 Remember — always use your AUTH TOKEN to access API's
 </aside>
 
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Fetch API
 
 ```python
@@ -68,19 +73,21 @@ Remember — always use your AUTH TOKEN to access API's
 
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+This endpoint retrieves a data from a specified collection.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://*.obto.co/o/recs/<collection_name>?stream=true&project=<fields>&oquery=<db query>`
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Parameter | Value | Description
+--------- | ----- | -----------
+stream | true | The ID of the kitten to retrieve
+projection | | comma seperate list of fields to show
+oquery | | See API Query Builder
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Post API
 
@@ -96,15 +103,15 @@ ID | The ID of the kitten to retrieve
 
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint will create a new record in the collection specified
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`POST https://*.obto.co/o/<collection_name>`
 
-### URL Parameters
+### POST Body
 
-Parameter | Description
+Body | Description
 --------- | -----------
-ID | The ID of the kitten to delete
+Json Data | Data to be posted
 

@@ -1,5 +1,8 @@
 # Reports (SOFOS)
 
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Get Fee Defaulters
 
 ```ruby
@@ -39,6 +42,7 @@ end_month | true | End month of the range
 
 ### HTTP Response
 
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Daily Fee Collection
 
@@ -58,8 +62,6 @@ end_month | true | End month of the range
 
 ```
 
-> The above command returns JSON structured like this:
-
 ```json
 
 ```
@@ -77,6 +79,45 @@ Parameter | Mandatory | Description
 from | true | Start date.
 to | true | End date
 payment_type | true | Payment type (cash, cheque, card, neft, all)
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
+## Get Student Concession
+
+```ruby
+
+```
+
+```python
+
+```
+
+```shell
+
+```
+
+```javascript
+
+```
+
+```json
+
+```
+
+This endpoint retrieves current consession for a student
+
+### HTTP Request
+
+`POST https://*.obto.co/o/recs/fee_concession?stream=true&`
+
+### URL Parameters
+
+Parameter | Mandatory | Description
+--------- | ------- | -----------
+name.value | true | Student ID
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Daily Leave Report
 
@@ -96,17 +137,15 @@ payment_type | true | Payment type (cash, cheque, card, neft, all)
 
 ```
 
-> The above command returns JSON structured like this:
-
 ```json
 
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint fetches all the leave requests for a given date.
 
 ### HTTP Request
 
-`DELETE https://*.obto.co/`
+`GET https://*.obto.co/o/recs/leave_request?stream=true&oquery=created_on=today`
 
 ### URL Parameters
 
@@ -114,6 +153,8 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Daily Unique SMS Sent
 
@@ -143,13 +184,15 @@ This endpoint deletes a specific kitten.
 
 ### HTTP Request
 
-`DELETE https://*.obto.co/`
+`GET https://*.obto.co/`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Daily Rollbacks
 
@@ -175,11 +218,11 @@ ID | The ID of the kitten to delete
 
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint fetches daily rollbacked reciepts.
 
 ### HTTP Request
 
-`DELETE https://*.obto.co/`
+`GET https://*.obto.co/`
 
 ### URL Parameters
 
@@ -187,6 +230,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Class Details
 
@@ -224,7 +268,8 @@ Parameter | Description
 --------- | -----------
 None | Blank
 
-<>///////////////////////////////////////////
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Get Monthly Class Attendance
 
 ```javascript
@@ -249,7 +294,7 @@ This endpoint deletes a specific kitten.
 
 ### HTTP Request
 
-`DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end`
+`GET https://*.obto.co/attendancebyclassbymonth/:class/:start/:end`
 
 ### URL Parameters
 
@@ -260,7 +305,8 @@ start | Start Date
 end | End Date
 
 
-<///////////////////////////////////////////////////////////////////////////////////>
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Get Student Attendance
 
 ```javascript
@@ -326,12 +372,10 @@ This endpoint deletes a specific kitten.
 
 Parameter | Description
 --------- | -----------
-class | Class Name
-start | Start Date
-end | End Date
-
+sequence | Student's Admission No#
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Get Teacher Information
 
 ```javascript
@@ -356,17 +400,16 @@ This endpoint deletes a specific kitten.
 
 ### HTTP Request
 
-`GET https://*.obto.co/o/recs/pltf_user?stream=true&oquery=role=*teacher`
+`GET https://*.obto.co/o/recs/pltf_user?stream=true&oquery=active=true,roles=*teacher`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-class | Class Name
-start | Start Date
-end | End Date
+roles | Role that needs to be searched
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
+
 ## Get Teacher's Attendance
 
 ```javascript
@@ -381,25 +424,24 @@ end | End Date
 
 ```
 
-> The above command returns JSON structured like this:
+<!-- > The above command returns JSON structured like this: -->
 
 ```json
 
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint fetches Teacher's Attendance.
 
 ### HTTP Request
 
-`GET https://*.obto.co/o/recs/teacher_attendance?stream=true&oquery=sequence=`*STUDENT ADMISSION NO*
+`GET https://*.obto.co/o/recs/teacher_attendance?stream=true&oquery=created_on=today,name.value=`*Teacher's User ID*
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-class | Class Name
-start | Start Date
-end | End Date
+name.value | User ID
+created_on | Date
 
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
@@ -417,22 +459,22 @@ end | End Date
 
 ```
 
-> The above command returns JSON structured like this:
+<!-- > The above command returns JSON structured like this: -->
 
 ```json
 
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint fetches Student grade book for a term.
 
 ### HTTP Request
 
-`GET https://*.obto.co/o/recs/result?stream=true&oquery=admission_no=`*STUDENT ADMISSION NO*
+`GET https://*.obto.co/o/recs/result?stream=true&oquery=session=2018-19,term=halfyear,admission_no=`*STUDENT ADMISSION NO*
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-class | Class Name
-start | Start Date
-end | End Date
+session | Current Session
+term | halfyear,finalyear
+admission_no | Student's Admission No#
