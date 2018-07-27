@@ -1,7 +1,5 @@
 # Reports (SOFOS)
 
-![alt text](logo.png)
-
 ## Get Fee Defaulters
 
 ```ruby
@@ -226,7 +224,7 @@ Parameter | Description
 --------- | -----------
 None | Blank
 
-
+<>///////////////////////////////////////////
 ## Get Monthly Class Attendance
 
 ```javascript
@@ -252,6 +250,184 @@ This endpoint deletes a specific kitten.
 ### HTTP Request
 
 `DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+class | Class Name
+start | Start Date
+end | End Date
+
+
+<///////////////////////////////////////////////////////////////////////////////////>
+## Get Student Attendance
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`GET https://*.obto.co/o/recs/attendance?stream=true&oquery=created=today`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+class | Class Name
+start | Start Date
+end | End Date
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+## Get Student Information
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`GET https://*.obto.co/o/recs/registration?stream=true&oquery=sequence=`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+class | Class Name
+start | Start Date
+end | End Date
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+## Get Teacher Information
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`GET https://*.obto.co/o/recs/pltf_user?stream=true&oquery=role=*teacher`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+class | Class Name
+start | Start Date
+end | End Date
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+## Get Teacher's Attendance
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`GET https://*.obto.co/o/recs/teacher_attendance?stream=true&oquery=sequence=`*STUDENT ADMISSION NO*
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+class | Class Name
+start | Start Date
+end | End Date
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+## Get Student Grade Book
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`GET https://*.obto.co/o/recs/result?stream=true&oquery=admission_no=`*STUDENT ADMISSION NO*
 
 ### URL Parameters
 
