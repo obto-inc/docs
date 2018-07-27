@@ -224,7 +224,7 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#guide" class="toc-h1 toc-link" data-title="Guide">Guide</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
           </li>
           <li>
             <a href="#platform-library" class="toc-h1 toc-link" data-title="Platform Library">Platform Library</a>
@@ -323,6 +323,9 @@
                     <a href="#get-daily-fee-collection" class="toc-h2 toc-link" data-title="Get Daily Fee Collection">Get Daily Fee Collection</a>
                   </li>
                   <li>
+                    <a href="#get-student-concession" class="toc-h2 toc-link" data-title="Get Student Concession">Get Student Concession</a>
+                  </li>
+                  <li>
                     <a href="#get-daily-leave-report" class="toc-h2 toc-link" data-title="Get Daily Leave Report">Get Daily Leave Report</a>
                   </li>
                   <li>
@@ -363,16 +366,19 @@
             <li><a href='https://sofos.obto.co'>Privacy Policy</a></li>
             <li><a href='https://sofos.obto.co'>Terms Of Use</a></li>
             <li><a href='https://sofos.obto.co'>Security Policy</a></li>
+            <li>Current Version - 1.9.3</li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the OBTO API! You can use our API to access OBTO API endpoints, which can get information on various reports, collections, and routes on the platform.</p>
+<p>The API reference documentation provides detailed information for each of the methods and endpoints of the platform.</p>
+
+<p>The information can be used for reporting, reading collections, and accessing routes on the platform.</p>
 
 <p>We have language bindings in NodeJs, C#, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-<h1 id='guide'>Guide</h1>
+<h1 id='getting-started'>Getting Started</h1>
 <p>For application development please refer <a href="https://www.obto.co/site/ob/documentation">developer guide</a>.</p>
 <h1 id='platform-library'>Platform Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
@@ -541,6 +547,8 @@ Notice the double equal after the name
 <aside class="notice">
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='important'>Important</h2>
 <p>Every collection in SOFOS is accessible via a HTTP API.</p>
 
@@ -553,47 +561,63 @@ You must replace <code>GENERATED TOKEN</code> with your personal API key.
 <aside class="success">
 Remember — always use your AUTH TOKEN to access API's
 </aside>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='fetch-api'>Fetch API</h2><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>This endpoint retrieves a data from a specified collection.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>GET https://*.obto.co/o/recs/&lt;collection_name&gt;?stream=true&amp;project=&lt;fields&gt;&amp;oquery=&lt;db query&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Value</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
+<td>stream</td>
+<td>true</td>
 <td>The ID of the kitten to retrieve</td>
 </tr>
+<tr>
+<td>projection</td>
+<td></td>
+<td>comma seperate list of fields to show</td>
+</tr>
+<tr>
+<td>oquery</td>
+<td></td>
+<td>See API Query Builder</td>
+</tr>
 </tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='post-api'>Post API</h2><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint will create a new record in the collection specified</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>POST https://*.obto.co/o/&lt;collection_name&gt;</code></p>
+<h3 id='post-body'>POST Body</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Body</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>Json Data</td>
+<td>Data to be posted</td>
 </tr>
 </tbody></table>
-<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
+<h1 id='reports-sofos'>Reports (SOFOS)</h1>
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
@@ -625,15 +649,13 @@ Remember — always use your AUTH TOKEN to access API's
 <td>End month of the range</td>
 </tr>
 </tbody></table>
-<h3 id='http-response'>HTTP Response</h3><h2 id='get-daily-fee-collection'>Get Daily Fee Collection</h2><pre class="highlight ruby tab-ruby"><code>
+<h3 id='http-response'>HTTP Response</h3>
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-daily-fee-collection'>Get Daily Fee Collection</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves daily fee collection for a given date range.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
@@ -662,44 +684,42 @@ Remember — always use your AUTH TOKEN to access API's
 <td>Payment type (cash, cheque, card, neft, all)</td>
 </tr>
 </tbody></table>
-<h2 id='get-daily-leave-report'>Get Daily Leave Report</h2><pre class="highlight ruby tab-ruby"><code>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-concession'>Get Student Concession</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint retrieves current consession for a student</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
+<p><code>POST https://*.obto.co/o/recs/fee_concession?stream=true&amp;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Mandatory</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>name.value</td>
+<td>true</td>
+<td>Student ID</td>
 </tr>
 </tbody></table>
-<h2 id='get-daily-unique-sms-sent'>Get Daily Unique SMS Sent</h2><pre class="highlight ruby tab-ruby"><code>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-daily-leave-report'>Get Daily Leave Report</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint fetches all the leave requests for a given date.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
+<p><code>GET https://*.obto.co/o/recs/leave_request?stream=true&amp;oquery=created_on=today</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -712,7 +732,9 @@ Remember — always use your AUTH TOKEN to access API's
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
-<h2 id='get-daily-rollbacks'>Get Daily Rollbacks</h2><pre class="highlight ruby tab-ruby"><code>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-daily-unique-sms-sent'>Get Daily Unique SMS Sent</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
@@ -724,7 +746,7 @@ Remember — always use your AUTH TOKEN to access API's
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/</code></p>
+<p><code>GET https://*.obto.co/</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -737,6 +759,35 @@ Remember — always use your AUTH TOKEN to access API's
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-daily-rollbacks'>Get Daily Rollbacks</h2><pre class="highlight ruby tab-ruby"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint fetches daily rollbacked reciepts.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the kitten to delete</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='get-class-details'>Get Class Details</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
@@ -748,9 +799,9 @@ Remember — always use your AUTH TOKEN to access API's
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/classbycategory.bto</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
+<h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -763,7 +814,7 @@ Remember — always use your AUTH TOKEN to access API's
 </tr>
 </tbody></table>
 
-<p>&lt;&gt;///////////////////////////////////////////</p>
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='get-monthly-class-attendance'>Get Monthly Class Attendance</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight java tab-java"><code>
@@ -774,9 +825,9 @@ Remember — always use your AUTH TOKEN to access API's
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
-<p><code>DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -797,7 +848,7 @@ Remember — always use your AUTH TOKEN to access API's
 </tr>
 </tbody></table>
 
-<p>&lt;///////////////////////////////////////////////////////////////////////////////////&gt;</p>
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='get-student-attendance'>Get Student Attendance</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight java tab-java"><code>
@@ -808,9 +859,9 @@ Remember — always use your AUTH TOKEN to access API's
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
+<h3 id='http-request-9'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/attendance?stream=true&amp;oquery=created=today</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
+<h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -842,9 +893,9 @@ Remember — always use your AUTH TOKEN to access API's
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
+<h3 id='http-request-10'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/registration?stream=true&amp;oquery=sequence=</code></p>
-<h3 id='url-parameters-8'>URL Parameters</h3>
+<h3 id='url-parameters-9'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -852,16 +903,8 @@ Remember — always use your AUTH TOKEN to access API's
 </tr>
 </thead><tbody>
 <tr>
-<td>class</td>
-<td>Class Name</td>
-</tr>
-<tr>
-<td>start</td>
-<td>Start Date</td>
-</tr>
-<tr>
-<td>end</td>
-<td>End Date</td>
+<td>sequence</td>
+<td>Student&#39;s Admission No#</td>
 </tr>
 </tbody></table>
 
@@ -876,42 +919,8 @@ Remember — always use your AUTH TOKEN to access API's
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
-<p><code>GET https://*.obto.co/o/recs/pltf_user?stream=true&amp;oquery=role=*teacher</code></p>
-<h3 id='url-parameters-9'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>class</td>
-<td>Class Name</td>
-</tr>
-<tr>
-<td>start</td>
-<td>Start Date</td>
-</tr>
-<tr>
-<td>end</td>
-<td>End Date</td>
-</tr>
-</tbody></table>
-
-<!--///////////////////////////////////////////////////////////////////////////////////-->
-<h2 id='get-teacher-39-s-attendance'>Get Teacher&#39;s Attendance</h2><pre class="highlight javascript tab-javascript"><code>
-</code></pre><pre class="highlight python tab-python"><code>
-</code></pre><pre class="highlight java tab-java"><code>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
 <h3 id='http-request-11'>HTTP Request</h3>
-<p><code>GET https://*.obto.co/o/recs/teacher_attendance?stream=true&amp;oquery=sequence=</code><em>STUDENT ADMISSION NO</em></p>
+<p><code>GET https://*.obto.co/o/recs/pltf_user?stream=true&amp;oquery=active=true,roles=*teacher</code></p>
 <h3 id='url-parameters-10'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -920,32 +929,22 @@ Remember — always use your AUTH TOKEN to access API's
 </tr>
 </thead><tbody>
 <tr>
-<td>class</td>
-<td>Class Name</td>
-</tr>
-<tr>
-<td>start</td>
-<td>Start Date</td>
-</tr>
-<tr>
-<td>end</td>
-<td>End Date</td>
+<td>roles</td>
+<td>Role that needs to be searched</td>
 </tr>
 </tbody></table>
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
-<h2 id='get-student-grade-book'>Get Student Grade Book</h2><pre class="highlight javascript tab-javascript"><code>
+<h2 id='get-teacher-39-s-attendance'>Get Teacher&#39;s Attendance</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight java tab-java"><code>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
+<!-- > The above command returns JSON structured like this: -->
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint fetches Teacher&#39;s Attendance.</p>
 <h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET https://*.obto.co/o/recs/result?stream=true&amp;oquery=admission_no=</code><em>STUDENT ADMISSION NO</em></p>
+<p><code>GET https://*.obto.co/o/recs/teacher_attendance?stream=true&amp;oquery=created_on=today,name.value=</code><em>Teacher&#39;s User ID</em></p>
 <h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -954,16 +953,44 @@ Remember — always use your AUTH TOKEN to access API's
 </tr>
 </thead><tbody>
 <tr>
-<td>class</td>
-<td>Class Name</td>
+<td>name.value</td>
+<td>User ID</td>
 </tr>
 <tr>
-<td>start</td>
-<td>Start Date</td>
+<td>created_on</td>
+<td>Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-grade-book'>Get Student Grade Book</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<!-- > The above command returns JSON structured like this: -->
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint fetches Student grade book for a term.</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/result?stream=true&amp;oquery=session=2018-19,term=halfyear,admission_no=</code><em>STUDENT ADMISSION NO</em></p>
+<h3 id='url-parameters-12'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>Current Session</td>
 </tr>
 <tr>
-<td>end</td>
-<td>End Date</td>
+<td>term</td>
+<td>halfyear,finalyear</td>
+</tr>
+<tr>
+<td>admission_no</td>
+<td>Student&#39;s Admission No#</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>

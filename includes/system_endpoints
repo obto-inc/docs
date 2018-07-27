@@ -40,6 +40,8 @@
 <aside class="notice">
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='important'>Important</h2>
 <p>Every collection in SOFOS is accessible via a HTTP API.</p>
 
@@ -52,43 +54,57 @@ You must replace <code>GENERATED TOKEN</code> with your personal API key.
 <aside class="success">
 Remember — always use your AUTH TOKEN to access API's
 </aside>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='fetch-api'>Fetch API</h2><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<p>This endpoint retrieves a data from a specified collection.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>GET https://*.obto.co/o/recs/&lt;collection_name&gt;?stream=true&amp;project=&lt;fields&gt;&amp;oquery=&lt;db query&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Value</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
+<td>stream</td>
+<td>true</td>
 <td>The ID of the kitten to retrieve</td>
 </tr>
+<tr>
+<td>projection</td>
+<td></td>
+<td>comma seperate list of fields to show</td>
+</tr>
+<tr>
+<td>oquery</td>
+<td></td>
+<td>See API Query Builder</td>
+</tr>
 </tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='post-api'>Post API</h2><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
-<p>This endpoint deletes a specific kitten.</p>
+<p>This endpoint will create a new record in the collection specified</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<p><code>POST https://*.obto.co/o/&lt;collection_name&gt;</code></p>
+<h3 id='post-body'>POST Body</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Body</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>Json Data</td>
+<td>Data to be posted</td>
 </tr>
 </tbody></table>
