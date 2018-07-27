@@ -1,6 +1,4 @@
-<h1 id='reports-sofos'>Reports (SOFOS)</h1>
-<p><img src="/images/logo.png" alt="alt text" /></p>
-<h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
+<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
@@ -169,6 +167,8 @@
 <td>Blank</td>
 </tr>
 </tbody></table>
+
+<p>&lt;&gt;///////////////////////////////////////////</p>
 <h2 id='get-monthly-class-attendance'>Get Monthly Class Attendance</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight java tab-java"><code>
@@ -182,6 +182,176 @@
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
 <h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<p>&lt;///////////////////////////////////////////////////////////////////////////////////&gt;</p>
+<h2 id='get-student-attendance'>Get Student Attendance</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/attendance?stream=true&amp;oquery=created=today</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-information'>Get Student Information</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/registration?stream=true&amp;oquery=sequence=</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-teacher-information'>Get Teacher Information</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/pltf_user?stream=true&amp;oquery=role=*teacher</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-teacher-39-s-attendance'>Get Teacher&#39;s Attendance</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/teacher_attendance?stream=true&amp;oquery=sequence=</code><em>STUDENT ADMISSION NO</em></p>
+<h3 id='url-parameters-10'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-grade-book'>Get Student Grade Book</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/result?stream=true&amp;oquery=admission_no=</code><em>STUDENT ADMISSION NO</em></p>
+<h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>

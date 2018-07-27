@@ -224,18 +224,10 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
-                  </li>
-                  <li>
-                    <a href="#query-parameters" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
-                  </li>
-              </ul>
+            <a href="#guide" class="toc-h1 toc-link" data-title="Guide">Guide</a>
           </li>
           <li>
-            <a href="#system-library" class="toc-h1 toc-link" data-title="System Library">System Library</a>
+            <a href="#platform-library" class="toc-h1 toc-link" data-title="Platform Library">Platform Library</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#print" class="toc-h2 toc-link" data-title="Print">Print</a>
@@ -285,19 +277,39 @@
                   <li>
                     <a href="#sign-token" class="toc-h2 toc-link" data-title="Sign Token">Sign Token</a>
                   </li>
+                  <li>
+                    <a href="#database-api" class="toc-h2 toc-link" data-title="Database API">Database API</a>
+                  </li>
               </ul>
           </li>
           <li>
-            <a href="#system-endpoints" class="toc-h1 toc-link" data-title="System Endpoints">System Endpoints</a>
+            <a href="#api-query" class="toc-h1 toc-link" data-title="API Query">API Query</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#stream-logs" class="toc-h2 toc-link" data-title="Stream Logs">Stream Logs</a>
+                    <a href="#text-queries" class="toc-h2 toc-link" data-title="Text Queries">Text Queries</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#number-queries" class="toc-h2 toc-link" data-title="Number Queries">Number Queries</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#date-queries" class="toc-h2 toc-link" data-title="Date Queries">Date Queries</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#plarform-endpoints" class="toc-h1 toc-link" data-title="Plarform Endpoints">Plarform Endpoints</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
+                  </li>
+                  <li>
+                    <a href="#important" class="toc-h2 toc-link" data-title="Important">Important</a>
+                  </li>
+                  <li>
+                    <a href="#fetch-api" class="toc-h2 toc-link" data-title="Fetch API">Fetch API</a>
+                  </li>
+                  <li>
+                    <a href="#post-api" class="toc-h2 toc-link" data-title="Post API">Post API</a>
                   </li>
               </ul>
           </li>
@@ -325,6 +337,21 @@
                   <li>
                     <a href="#get-monthly-class-attendance" class="toc-h2 toc-link" data-title="Get Monthly Class Attendance">Get Monthly Class Attendance</a>
                   </li>
+                  <li>
+                    <a href="#get-student-attendance" class="toc-h2 toc-link" data-title="Get Student Attendance">Get Student Attendance</a>
+                  </li>
+                  <li>
+                    <a href="#get-student-information" class="toc-h2 toc-link" data-title="Get Student Information">Get Student Information</a>
+                  </li>
+                  <li>
+                    <a href="#get-teacher-information" class="toc-h2 toc-link" data-title="Get Teacher Information">Get Teacher Information</a>
+                  </li>
+                  <li>
+                    <a href="#get-teacher-39-s-attendance" class="toc-h2 toc-link" data-title="Get Teacher's Attendance">Get Teacher's Attendance</a>
+                  </li>
+                  <li>
+                    <a href="#get-student-grade-book" class="toc-h2 toc-link" data-title="Get Student Grade Book">Get Student Grade Book</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -345,7 +372,134 @@
 <p>Welcome to the OBTO API! You can use our API to access OBTO API endpoints, which can get information on various reports, collections, and routes on the platform.</p>
 
 <p>We have language bindings in NodeJs, C#, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='guide'>Guide</h1>
+<p>For application development please refer <a href="https://www.obto.co/site/ob/documentation">developer guide</a>.</p>
+<h1 id='platform-library'>Platform Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to print logs.</p>
+<h2 id='request-http-get-post-put-delete'>Request (HTTP: GET,POST,PUT,DELETE)</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">request</span><span class="p">()</span>
+</code></pre>
+<p>This code is used to prepare requests to external API/Endpoints</p>
+<h2 id='fetch-all-sub-domains'>Fetch All Sub-domains</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">alldomains</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">domain</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to get all domains on the instance</p>
+<h2 id='check-for-top-domain'>Check For Top Domain</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isTop</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">domain_name</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to check the .</p>
+<h2 id='encryption'>Encryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to encrypt text.</p>
+<h2 id='decryption'>Decryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to decrypt text.</p>
+<h2 id='publish-via-emma'>Publish Via Emma</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">emma</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used publish message to a topic.</p>
+<h2 id='log-message'>Log message</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to log text.</p>
+<h2 id='get-property'>Get Property</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getProperty</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">property_name</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to get property.</p>
+<h2 id='fetch-global-properties'>Fetch Global Properties</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getGloablProps</span><span class="p">()</span>
+</code></pre>
+<p>This code is used to fetch all global properties.</p>
+<h2 id='send-email'>Send Email</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendMailv2</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Email</span> <span class="nx">object</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to send email.</p>
+<h2 id='send-sms'>Send SMS</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">SMS</span> <span class="nb">Object</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to send SMS.</p>
+<h2 id='run-aggregation'>Run Aggregation</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">agg</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to run DB Aggregation.</p>
+<h2 id='run-user-script'>Run User Script</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">runScript</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">user_script</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to run user script.</p>
+<h2 id='check-if-edu-collection'>Check If Edu Collection</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isEdu</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">collection_name</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to check if the collection belong to EDU domain.</p>
+<h2 id='sign-token'>Sign Token</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+</code></pre>
+<p>This code is used to sign and return user token.</p>
+<h2 id='database-api'>Database API</h2>
+<p>Database API is accessible via the global &quot;ob&quot; object as &quot;ob.db&quot;.</p>
+<h3 id='getcount-function-collection-query-options-_callback'>getCount = function (collection, query, options, _callback)</h3><h3 id='finddistinct-function-collection-key-query-options-_callback'>findDistinct = function (collection, key, query, options, _callback)</h3><h3 id='findandmodify-function-collection-query-sort-replacement-options-_callback'>findAndModify = function (collection, query, sort, replacement, options, _callback)</h3><h3 id='findstream-function-tablename-query-options-_eod-_com'>findStream = function (tableName, query, options, _eod, _com)</h3><h3 id='agg-function-collection-agg-_eod-_com'>agg = function (collection, agg, _eod, _com)</h3><h3 id='create-function-tablename-_data-options-_callback'>create = function (tableName, _data, options, _callback)</h3><h3 id='createmultiple-function-tablename-_data-options-_callback'>createMultiple = function (tableName, _data, options, _callback)</h3><h3 id='update-function-tablename-query-options-options2-options3-_callback'>update = function (tableName, query, options, options2, options3, _callback)</h3><h3 id='updatemany-function-collection-query-options-options2-options3-_callback'>updateMany = function (collection, query, options, options2, options3, _callback)</h3><h3 id='listcollections-function-filter-_callback'>listCollections = function (filter, _callback)</h3><h3 id='readfile-function-fileid-res-opts'>readFile = function (fileId, res, opts)</h3><h1 id='api-query'>API Query</h1>
+<p>Querying DB via HTTP Endpoints is really easy and follows a simple key value pair standard.</p>
+
+<aside class="notice">
+You must know the field names of the collection to query before building a query
+</aside>
+
+<aside class="warning">API Query Builder is only applicable to Platform Endpoints</aside>
+
+<p>Example:</p>
+
+<p>Consider a collection name <strong>TASK</strong></p>
+
+<p>It has following fields :</p>
+
+<table><thead>
+<tr>
+<th>Fields</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>created_on</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>manager</td>
+<td>reference</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='text-queries'>Text Queries</h2><h3 id='query-on-single-field'>Query on single field</h3>
+<p><code>oquery=name=Dave Smith</code></p>
+<h3 id='query-on-multiple-fields'>Query on multiple fields</h3>
+<p><code>oquery=name=Dave Smith,amount=0</code></p>
+<h3 id='starts-with-query'>Starts With Query</h3>
+<p><code>oquery=name==Dave Smith</code></p>
+
+<aside class="notice">
+Notice the double equal after the name
+</aside>
+<h3 id='does-not-starts-with-query'>Does Not Starts with Query</h3>
+<p><code>oquery=name=!=Dave</code></p>
+<h3 id='contains-query'>Contains Query</h3>
+<p><code>oquery=name=*Dave</code></p>
+<h3 id='does-not-contain-query'>Does Not Contain Query</h3>
+<p><code>oquery=name=!*Dave</code></p>
+<h2 id='number-queries'>Number Queries</h2><h3 id='equals-than'>Equals Than</h3>
+<p><code>oquery=amount===0</code></p>
+<h3 id='greater-than'>Greater Than</h3>
+<p><code>oquery=amount=&gt;0</code></p>
+<h3 id='less-than'>Less Than</h3>
+<p><code>oquery=amount=&lt;0</code></p>
+<h2 id='date-queries'>Date Queries</h2><h3 id='today'>Today</h3>
+<p><code>oquery=created_on=today</code></p>
+<h3 id='yesterday'>Yesterday</h3>
+<p><code>oquery=created_on=yesterday</code></p>
+<h3 id='day-before-yesterday'>Day Before Yesterday</h3>
+<p><code>oquery=created_on=daybeforeyesterday</code></p>
+<h3 id='custom'>Custom</h3>
+<p><code>oquery=created_on=#in2018-07</code></p>
+
+<p><code>oquery=created_on=on2018-07-15</code></p>
+<h1 id='plarform-endpoints'>Plarform Endpoints</h1><h2 id='authentication'>Authentication</h2>
 <blockquote>
 <p>To obtain an access token, use this code:</p>
 </blockquote>
@@ -355,7 +509,7 @@
 <p>Make sure to replace <code>Username &amp; Password</code> with your login credentials.</p>
 </blockquote>
 
-<p>SOFOS uses API keys to allow access to the API. You can register a new SOFOS API key at our <a href="http://sofos.obto.co/developers">developer portal</a>.</p>
+<p>SOFOS uses API keys to allow access to the API. You can register a new SOFOS API key at our <a href="https://www.obto.co/site/ob/documentation">developer portal</a>.</p>
 
 <p>SOFOS expects a security tokem to be included in all API requests to the server in a header that looks like the following:</p>
 
@@ -387,204 +541,21 @@
 <aside class="notice">
 You must replace <code>GENERATED TOKEN</code> with your personal API key.
 </aside>
-<h1 id='system-library'>System Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
+<h2 id='important'>Important</h2>
+<p>Every collection in SOFOS is accessible via a HTTP API.</p>
+
+<p>Example :</p>
+
+<p>https://*.obto.co/o/recs/<collection_name>?stream=true&amp;project=<comma seperate list of fields to show>&amp;oquery=<db query></p>
+<pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='request-http-get-post-put-delete'>Request (HTTP: GET,POST,PUT,DELETE)</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">request</span><span class="p">()</span>
-</code></pre>
-<blockquote>
-<p>The above command is used to prepare requests</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='fetch-all-sub-domains'>Fetch All Sub-domains</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">alldomains</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">domain</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='check-for-top-domain'>Check For Top Domain</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='encryption'>Encryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='decryption'>Decryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='publish-via-emma'>Publish Via Emma</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">emma</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='log-message'>Log message</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='get-property'>Get Property</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getProperty</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='fetch-global-properties'>Fetch Global Properties</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getGloablProps</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='send-email'>Send Email</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendMailv2</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='send-sms'>Send SMS</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='run-aggregation'>Run Aggregation</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">agg</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='run-user-script'>Run User Script</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">runScript</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='check-if-edu-collection'>Check If Edu Collection</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isEdu</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to check if the collection belong to EDU domain.</p>
-<h2 id='sign-token'>Sign Token</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
-</code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to sign and return user token.</p>
-<h1 id='system-endpoints'>System Endpoints</h1><h2 id='stream-logs'>Stream Logs</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — always use your AUTH TOKEN to access API's
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
+<h2 id='fetch-api'>Fetch API</h2><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific kitten.</p>
 
@@ -603,30 +574,10 @@ Remember — a happy kitten is an authenticated kitten!
 <td>The ID of the kitten to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='post-api'>Post API</h2><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight shell tab-shell"><code>
+</code></pre><pre class="highlight javascript tab-javascript"><code>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
@@ -642,9 +593,7 @@ Remember — a happy kitten is an authenticated kitten!
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
-<h1 id='reports-sofos'>Reports (SOFOS)</h1>
-<p><img src="images/logo.png" alt="alt text" /></p>
-<h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
+<h1 id='reports-sofos'>Reports (SOFOS)</h1><h2 id='get-fee-defaulters'>Get Fee Defaulters</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
 </code></pre><pre class="highlight javascript tab-javascript"><code>
@@ -813,6 +762,8 @@ Remember — a happy kitten is an authenticated kitten!
 <td>Blank</td>
 </tr>
 </tbody></table>
+
+<p>&lt;&gt;///////////////////////////////////////////</p>
 <h2 id='get-monthly-class-attendance'>Get Monthly Class Attendance</h2><pre class="highlight javascript tab-javascript"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight java tab-java"><code>
@@ -826,6 +777,176 @@ Remember — a happy kitten is an authenticated kitten!
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>DELETE https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
 <h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<p>&lt;///////////////////////////////////////////////////////////////////////////////////&gt;</p>
+<h2 id='get-student-attendance'>Get Student Attendance</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/attendance?stream=true&amp;oquery=created=today</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-information'>Get Student Information</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/registration?stream=true&amp;oquery=sequence=</code></p>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-teacher-information'>Get Teacher Information</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/pltf_user?stream=true&amp;oquery=role=*teacher</code></p>
+<h3 id='url-parameters-9'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-teacher-39-s-attendance'>Get Teacher&#39;s Attendance</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/teacher_attendance?stream=true&amp;oquery=sequence=</code><em>STUDENT ADMISSION NO</em></p>
+<h3 id='url-parameters-10'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>class</td>
+<td>Class Name</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start Date</td>
+</tr>
+<tr>
+<td>end</td>
+<td>End Date</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-student-grade-book'>Get Student Grade Book</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint deletes a specific kitten.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/o/recs/result?stream=true&amp;oquery=admission_no=</code><em>STUDENT ADMISSION NO</em></p>
+<h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>

@@ -1,0 +1,75 @@
+<h1 id='api-query'>API Query</h1>
+<p>Querying DB via HTTP Endpoints is really easy and follows a simple key value pair standard.</p>
+
+<aside class="notice">
+You must know the field names of the collection to query before building a query
+</aside>
+
+<aside class="warning">API Query Builder is only applicable to Platform Endpoints</aside>
+
+<p>Example:</p>
+
+<p>Consider a collection name <strong>TASK</strong></p>
+
+<p>It has following fields :</p>
+
+<table><thead>
+<tr>
+<th>Fields</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>created_on</td>
+<td>datetime</td>
+<td></td>
+</tr>
+<tr>
+<td>manager</td>
+<td>reference</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='text-queries'>Text Queries</h2><h3 id='query-on-single-field'>Query on single field</h3>
+<p><code>oquery=name=Dave Smith</code></p>
+<h3 id='query-on-multiple-fields'>Query on multiple fields</h3>
+<p><code>oquery=name=Dave Smith,amount=0</code></p>
+<h3 id='starts-with-query'>Starts With Query</h3>
+<p><code>oquery=name==Dave Smith</code></p>
+
+<aside class="notice">
+Notice the double equal after the name
+</aside>
+<h3 id='does-not-starts-with-query'>Does Not Starts with Query</h3>
+<p><code>oquery=name=!=Dave</code></p>
+<h3 id='contains-query'>Contains Query</h3>
+<p><code>oquery=name=*Dave</code></p>
+<h3 id='does-not-contain-query'>Does Not Contain Query</h3>
+<p><code>oquery=name=!*Dave</code></p>
+<h2 id='number-queries'>Number Queries</h2><h3 id='equals-than'>Equals Than</h3>
+<p><code>oquery=amount===0</code></p>
+<h3 id='greater-than'>Greater Than</h3>
+<p><code>oquery=amount=&gt;0</code></p>
+<h3 id='less-than'>Less Than</h3>
+<p><code>oquery=amount=&lt;0</code></p>
+<h2 id='date-queries'>Date Queries</h2><h3 id='today'>Today</h3>
+<p><code>oquery=created_on=today</code></p>
+<h3 id='yesterday'>Yesterday</h3>
+<p><code>oquery=created_on=yesterday</code></p>
+<h3 id='day-before-yesterday'>Day Before Yesterday</h3>
+<p><code>oquery=created_on=daybeforeyesterday</code></p>
+<h3 id='custom'>Custom</h3>
+<p><code>oquery=created_on=#in2018-07</code></p>
+
+<p><code>oquery=created_on=on2018-07-15</code></p>

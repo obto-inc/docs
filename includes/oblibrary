@@ -1,112 +1,51 @@
-<h1 id='system-library'>System Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
+<h1 id='platform-library'>Platform Library</h1><h2 id='print'>Print</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
 <p>This code is used to print logs.</p>
 <h2 id='request-http-get-post-put-delete'>Request (HTTP: GET,POST,PUT,DELETE)</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">request</span><span class="p">()</span>
 </code></pre>
-<blockquote>
-<p>The above command is used to prepare requests</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used to prepare requests to external API/Endpoints</p>
 <h2 id='fetch-all-sub-domains'>Fetch All Sub-domains</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">alldomains</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">domain</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='check-for-top-domain'>Check For Top Domain</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">log</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to get all domains on the instance</p>
+<h2 id='check-for-top-domain'>Check For Top Domain</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isTop</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">domain_name</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used to check the .</p>
 <h2 id='encryption'>Encryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used to encrypt text.</p>
 <h2 id='decryption'>Decryption</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">encrypt</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">text</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used to decrypt text.</p>
 <h2 id='publish-via-emma'>Publish Via Emma</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">emma</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used publish message to a topic.</p>
 <h2 id='log-message'>Log message</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='get-property'>Get Property</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getProperty</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to log text.</p>
+<h2 id='get-property'>Get Property</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getProperty</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">property_name</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='fetch-global-properties'>Fetch Global Properties</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getGloablProps</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to get property.</p>
+<h2 id='fetch-global-properties'>Fetch Global Properties</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">getGloablProps</span><span class="p">()</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='send-email'>Send Email</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendMailv2</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to fetch all global properties.</p>
+<h2 id='send-email'>Send Email</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendMailv2</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Email</span> <span class="nx">object</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='send-sms'>Send SMS</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to send email.</p>
+<h2 id='send-sms'>Send SMS</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sendSMS</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">SMS</span> <span class="nb">Object</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
+<p>This code is used to send SMS.</p>
 <h2 id='run-aggregation'>Run Aggregation</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">agg</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='run-user-script'>Run User Script</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">runScript</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to run DB Aggregation.</p>
+<h2 id='run-user-script'>Run User Script</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">runScript</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">user_script</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
-<p>This code is used to print logs.</p>
-<h2 id='check-if-edu-collection'>Check If Edu Collection</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isEdu</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
+<p>This code is used to run user script.</p>
+<h2 id='check-if-edu-collection'>Check If Edu Collection</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">isEdu</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">collection_name</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
 <p>This code is used to check if the collection belong to EDU domain.</p>
 <h2 id='sign-token'>Sign Token</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">ob</span><span class="p">.</span><span class="nx">sign</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">message</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
-<blockquote>
-<p>The above command prints the log</p>
-</blockquote>
-
 <p>This code is used to sign and return user token.</p>
+<h2 id='database-api'>Database API</h2>
+<p>Database API is accessible via the global &quot;ob&quot; object as &quot;ob.db&quot;.</p>
+<h3 id='getcount-function-collection-query-options-_callback'>getCount = function (collection, query, options, _callback)</h3><h3 id='finddistinct-function-collection-key-query-options-_callback'>findDistinct = function (collection, key, query, options, _callback)</h3><h3 id='findandmodify-function-collection-query-sort-replacement-options-_callback'>findAndModify = function (collection, query, sort, replacement, options, _callback)</h3><h3 id='findstream-function-tablename-query-options-_eod-_com'>findStream = function (tableName, query, options, _eod, _com)</h3><h3 id='agg-function-collection-agg-_eod-_com'>agg = function (collection, agg, _eod, _com)</h3><h3 id='create-function-tablename-_data-options-_callback'>create = function (tableName, _data, options, _callback)</h3><h3 id='createmultiple-function-tablename-_data-options-_callback'>createMultiple = function (tableName, _data, options, _callback)</h3><h3 id='update-function-tablename-query-options-options2-options3-_callback'>update = function (tableName, query, options, options2, options3, _callback)</h3><h3 id='updatemany-function-collection-query-options-options2-options3-_callback'>updateMany = function (collection, query, options, options2, options3, _callback)</h3><h3 id='listcollections-function-filter-_callback'>listCollections = function (filter, _callback)</h3><h3 id='readfile-function-fileid-res-opts'>readFile = function (fileId, res, opts)</h3>
