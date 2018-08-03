@@ -82,6 +82,40 @@ payment_type | true | Payment type (cash, cheque, card, neft, all)
 
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
+## Get Fee Summary
+
+```javascript
+
+```
+
+```python
+
+```
+
+```java
+
+```
+
+<!-- > The above command returns JSON structured like this: -->
+
+```json
+
+```
+
+This endpoint fetches fee summary, monthwise or fee head wise.
+
+### HTTP Request
+
+`GET https://*.obto.co/feesummary.bto?type=`*TYPE*
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+type | month | fee
+
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 
 ## Get Student Concession
 
