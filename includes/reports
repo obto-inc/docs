@@ -69,6 +69,30 @@
 </tbody></table>
 
 <!--///////////////////////////////////////////////////////////////////////////////////-->
+<h2 id='get-fee-summary'>Get Fee Summary</h2><pre class="highlight javascript tab-javascript"><code>
+</code></pre><pre class="highlight python tab-python"><code>
+</code></pre><pre class="highlight java tab-java"><code>
+</code></pre>
+<!-- > The above command returns JSON structured like this: -->
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>This endpoint fetches fee summary, monthwise or fee head wise.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://*.obto.co/feesummary.bto?type=</code><em>TYPE</em></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>month</td>
+</tr>
+</tbody></table>
+
+<!--///////////////////////////////////////////////////////////////////////////////////-->
 <h2 id='get-student-concession'>Get Student Concession</h2><pre class="highlight ruby tab-ruby"><code>
 </code></pre><pre class="highlight python tab-python"><code>
 </code></pre><pre class="highlight shell tab-shell"><code>
@@ -76,9 +100,9 @@
 </code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves current consession for a student</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://*.obto.co/o/recs/fee_concession?stream=true&amp;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -101,9 +125,9 @@
 </code></pre><pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint fetches all the leave requests for a given date.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/leave_request?stream=true&amp;oquery=created_on=today</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='url-parameters-4'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -128,9 +152,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-parameters-5'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -155,9 +179,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint fetches daily rollbacked reciepts.</p>
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
+<h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -182,9 +206,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-7'>HTTP Request</h3>
+<h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/classbycategory.bto</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
+<h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -208,9 +232,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-8'>HTTP Request</h3>
+<h3 id='http-request-9'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/attendancebyclassbymonth/:class/:start/:end</code></p>
-<h3 id='url-parameters-7'>URL Parameters</h3>
+<h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -242,9 +266,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-9'>HTTP Request</h3>
+<h3 id='http-request-10'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/attendance?stream=true&amp;oquery=created=today</code></p>
-<h3 id='url-parameters-8'>URL Parameters</h3>
+<h3 id='url-parameters-9'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -276,9 +300,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-10'>HTTP Request</h3>
+<h3 id='http-request-11'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/registration?stream=true&amp;oquery=sequence=</code></p>
-<h3 id='url-parameters-9'>URL Parameters</h3>
+<h3 id='url-parameters-10'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -302,9 +326,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-11'>HTTP Request</h3>
+<h3 id='http-request-12'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/pltf_user?stream=true&amp;oquery=active=true,roles=*teacher</code></p>
-<h3 id='url-parameters-10'>URL Parameters</h3>
+<h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -326,9 +350,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint fetches Teacher&#39;s Attendance.</p>
-<h3 id='http-request-12'>HTTP Request</h3>
+<h3 id='http-request-13'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/teacher_attendance?stream=true&amp;oquery=created_on=today,name.value=</code><em>Teacher&#39;s User ID</em></p>
-<h3 id='url-parameters-11'>URL Parameters</h3>
+<h3 id='url-parameters-12'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -354,9 +378,9 @@
 <pre class="highlight json tab-json"><code><span class="w">
 </span></code></pre>
 <p>This endpoint fetches Student grade book for a term.</p>
-<h3 id='http-request-13'>HTTP Request</h3>
+<h3 id='http-request-14'>HTTP Request</h3>
 <p><code>GET https://*.obto.co/o/recs/result?stream=true&amp;oquery=session=2018-19,term=halfyear,admission_no=</code><em>STUDENT ADMISSION NO</em></p>
-<h3 id='url-parameters-12'>URL Parameters</h3>
+<h3 id='url-parameters-13'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
