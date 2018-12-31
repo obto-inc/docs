@@ -18,6 +18,7 @@ includes:
   - apiquery
   - system_endpoints
   - reports
+  - processes
   - errors
 
 search: true
